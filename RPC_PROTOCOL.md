@@ -240,7 +240,7 @@ Respuesta de un agente indicando su acción elegida para su turno.
 
 -   Los mensajes inválidos resultan en cierre de conexión
 -   Timeouts (5 segundos) para solicitudes
-
+ 
 ## Ejemplo de Sesión de Comunicación
 
 ```

@@ -1,3 +1,5 @@
+// common/tcp_connection.h
+// Declare the TcpConnection/TcpServer classes for the tcp_connection.cpp
 #pragma once
 #include <string>
 #include <vector>

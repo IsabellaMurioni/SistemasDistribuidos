@@ -12,6 +12,7 @@ find_package(Threads REQUIRED)
 set(COMMON_SOURCES
   common/tcp_connection.cpp
   common/rpc_protocol.cpp
+  logic/logic.cpp
 )
 
 add_executable(
@@ -26,6 +27,21 @@ target_include_directories(
 
 target_link_libraries(
   agent
+  Threads::Threads
+)
+
+add_executable(
+  server
+  server.cpp
+  ${COMMON_SOURCES}
+)
+
+target_include_directories(
+  server PRIVATE ${CMAKE_SOURCE_DIR}
+)
+
+target_link_libraries(
+  server
   Threads::Threads
 )
 

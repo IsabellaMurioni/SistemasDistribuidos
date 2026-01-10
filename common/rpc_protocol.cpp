@@ -1,3 +1,5 @@
+// common/rpc_protocol.cpp
+// Implements the RPC protocol for communication between the game engine and agents
 #include "rpc_protocol.h"
 #include <sstream>
 #include <unordered_map>
@@ -8,7 +10,32 @@
 
 namespace rpc {
 
-// Basic JSON utilities
+#include <string>
+
+std::string void_response(const std::string& id) {
+    return std::string("{") +
+        "\"id\":\"" + id + "\"," +
+        "\"status\":\"ok\"" +
+    "}";
+}
+
+std::string turn_response(const std::string& id, const std::string& action) {
+    return std::string("{") +
+        "\"id\":\"" + id + "\"," +
+        "\"action\":\"" + action + "\"" +
+    "}";
+}
+
+
+std::string register_message(const std::string& id, const std::string& agent_id) {
+    return std::string("{") +
+        "\"id\":\"" + id + "\"," +
+        "\"type\":\"register_agent\"," +
+        "\"agent_id\":\"" + agent_id + "\"" +
+    "}";
+}
+    
+        //  Basic JSON utilities
 std::string escapeJson(const std::string& str) {
     std::string result;
     for (char c : str) {

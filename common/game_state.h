@@ -1,3 +1,5 @@
+// common/game_state.h
+// Defines the structures and enums for the game state 
 #pragma once
 #include <string>
 #include <vector>
@@ -55,7 +57,7 @@ inline std::string getStringFromDirection(Direction dir) {
         case Direction::SOUTH: return "south";
         case Direction::EAST: return "east";
         case Direction::WEST: return "west";
-        default: return "north";
+        default: return "south";
     }
 }
 
