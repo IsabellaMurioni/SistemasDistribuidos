@@ -32,7 +32,7 @@ Este tipo de arquitectura es común en **sistemas distribuidos, simulaciones y s
 
 ---
 
-## ▶️ Ejecución del Proyecto
+## ▶️ Ejecución del Proyecto BASH
 
 El proyecto se ejecuta utilizando **tres terminales**, simulando un entorno distribuido con servidor y agentes.
 
@@ -40,26 +40,29 @@ El proyecto se ejecuta utilizando **tres terminales**, simulando un entorno dist
 
 ### 🖥️ Terminal 1 – Build inicial del proyecto
 
-```bash
+```
 cd tp4-murioni-crocco
 code .
 mkdir build && cd build
 cmake ..
 make
-
+```
 ---
 
 ### 🤖 Terminal 2 – Ejecución del agente
+```
 cd tp4-murioni-crocco
 cd build
 ./agent
-
+```
 ---
 
 🌐 Terminal 3 – Ejecución del servidor
+```
 cd tp4-murioni-crocco
 cd build
 ./server
+```
 
 
 
